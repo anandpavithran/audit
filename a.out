@@ -1,0 +1,48 @@
+###################Hardware Details>#####################################
+========================Sys Info==========================================
+SYSTEM-MANUFACTURER: LENOVO
+SYSTEM-PRODUCT-NAME: 20L8S2N80A
+SYSTEM-SERIAL-NUMBER: PC11LL6J
+SYSTEM-UUID: b99f47cc-3383-11b2-a85c-837fc8669175
+SYSTEM-FAMILY: ThinkPad T480s
+======================Baseboard Info======================================
+BASEBOARD-MANUFACTURER: LENOVO
+BASEBOARD-PRODUCT-NAME: 20L8S2N80A
+BASEBOARD-SERIAL-NUMBER: L1HF91J0163
+======================Chasis Info=========================================
+CHASSIS-MANUFACTURER: LENOVO
+CHASSIS-TYPE: Notebook
+CHASSIS-SERIAL-NUMBER: PC11LL6J
+CHASSIS-ASSET-TAG: RH0023489
+======================CPU Info============================================
+CPU-VERSION:  Intel(R) Core(TM) i7-8650U CPU @ 1.90GHz
+CPU-FAMILY:  Core i7
+MAX-SPEED:   2100 MHz
+CORE-COUNT:  4
+THREAD-COUNT:  8
+======================Memory Info=========================================
+H/W path               Device          Class          Description
+=================================================================
+/0/3                                   memory         16GiB System Memory
+/0/3/0                                 memory         8GiB SODIMM DDR4 Synchronous Unbuffered (Unregistered) 2400 MHz (0.4 ns)
+/0/3/1                                 memory         8GiB SODIMM DDR4 Synchronous Unbuffered (Unregistered) 2400 MHz (0.4 ns)
+/0/7                                   memory         256KiB L1 cache
+/0/8                                   memory         1MiB L2 cache
+/0/9                                   memory         8MiB L3 cache
+/0/b                                   memory         128KiB BIOS
+/0/100/1f.2                            memory         Memory controller
+======================Disk Info===========================================
+H/W path               Device          Class          Description
+=================================================================
+/0/100/14/1/3/0.0.0    /dev/sda        disk           SD/MMC
+/0/100/14/1/3/0.0.0/0  /dev/sda        disk           
+/0/100/1d/0/1          /dev/nvme0n1    disk           256GB NVMe disk
+=====================Network Info=========================================
+H/W path               Device          Class          Description
+=================================================================
+/0/100/1c.6/0          wlp61s0         network        Wireless 8265 / 8275
+/0/100/1f.6            enp0s31f6       network        Ethernet Connection (4) I219-LM
+=====================Monitor Info=========================================
+SCREEN-RESOLUTION: 1920x1080
+##########################################################################
+Information generated on Wed 18 Nov 2020 08:18:48 PM IST
