@@ -44,7 +44,7 @@ echo "Information generated on $(date)"
 git clone https://github.com/anandpavithran/audit -q
 cd /root/audit;git add /root/audit
 cd /root/audit;git commit  -m "test" -q
-cd /root/audit;git push https://github.com/anandpavithran/audit.git -q 
+cd /root/audit;git push https://anandpavithran@github.com/anandpavithran/audit.git -q 
 echo -e "\x1B[31m Information generated on $(date) \x1B[0m"
 echo -e "\x1B[31m Thanks for your patience.You can poweroff and go to next machine \x1B[0m"
 #echo "Information generated on $(date)"
