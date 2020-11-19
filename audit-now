@@ -43,7 +43,7 @@ echo "Information generated on $(date)"
 ) >> a.out
 git clone https://github.com/anandpavithran/audit -q
 git clone https://github.com/anandpavithran/gls-audit-output -q
-cp -rf a.out /root/gls-audit-output/
+cp -rf /root/a.out /root/gls-audit-output/
 cd /root/gls-audit-output;git add /root/gls-audit-output
 cd /root/gls-audit-output;git commit  -m "$(date)" -q
 cd /root/gls-audit-output;git push https://anandpavithran@github.com/anandpavithran/gls-audit-output -q 
