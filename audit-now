@@ -1,4 +1,6 @@
 #!/bin/bash
+var1=$(zenity --entry --text "Enter station number like 1,2,3..?" --title "Station Number" --entry-text "");
+var2=$(zenity --entry --text "Enter Password?" --title "Password" --entry-text ""); 
 
 (echo "###################Hardware Details>#####################################" 
 
@@ -48,7 +50,7 @@ git config --global user.name "Audit"
 cp -rf /root/a.out /root/gls-audit-output/
 cd /root/gls-audit-output;git add /root/gls-audit-output
 cd /root/gls-audit-output;git commit  -m "$(date)" -q
-cd /root/gls-audit-output;git push https://anandpavithran@github.com/anandpavithran/gls-audit-output  
+cd /root/gls-audit-output;git push https://anandpavithran:$var2@github.com/anandpavithran/gls-audit-output  
 echo -e "\x1B[31m Information generated on $(date) \x1B[0m"
 echo -e "\x1B[31m Thanks for your patience.You can poweroff and go to next machine \x1B[0m"
 #echo "Information generated on $(date)"
