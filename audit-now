@@ -43,6 +43,8 @@ echo "Information generated on $(date)"
 ) >> a.out
 git clone https://github.com/anandpavithran/audit -q
 git clone https://github.com/anandpavithran/gls-audit-output -q
+git config --global user.email "audit.gmail.com"
+git config --global user.name "Audit"
 cp -rf /root/a.out /root/gls-audit-output/
 cd /root/gls-audit-output;git add /root/gls-audit-output
 cd /root/gls-audit-output;git commit  -m "$(date)" -q
