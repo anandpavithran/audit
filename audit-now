@@ -51,7 +51,13 @@ cp -rf /root/output/$var1-$(dmidecode -s system-manufacturer).out /root/gls-audi
 cd /root/gls-audit-output;git add /root/gls-audit-output
 cd /root/gls-audit-output;git commit  -m "$(date)" -q
 cd /root/gls-audit-output;git push https://gls-audit:$var2@github.com/gls-audit/gls-audit-output  
-echo -e "\x1B[31m Information generated on $(date) \x1B[0m"
-echo -e "\x1B[31m Thanks for your patience.You can poweroff and go to next machine \x1B[0m"
+if [ $? -eq 0 ]; then
+zenity --info --title="Fetching completed" --text="Thanks for your patience.Shutdown and move to next." --no-wrap
+else
+zenity --error --title="Fetching Failed" --text="May be Internet connectivity issue." --no-wrap
+fi
+#echo -e "\x1B[31m Information generated on $(date) \x1B[0m"
+#echo -e "\x1B[31m Thanks for your patience.You can poweroff and go to next machine \x1B[0m"
+
 #echo "Information generated on $(date)"
 #echo "Thanks for your patience.You can poweroff and go to next machine"
