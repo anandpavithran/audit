@@ -1,7 +1,7 @@
 #!/bin/bash
 var1=$(zenity --entry --text "Enter station number like 1,2,3..?" --title "Station Number" --entry-text "");
 var2=$(zenity --entry --text "Enter Password?" --title "Password" --entry-text ""); 
-
+mkdir /root/output
 (echo "###################Hardware Details>#####################################" 
 
 echo "========================Sys Info=========================================="
@@ -42,12 +42,12 @@ echo "=====================Monitor Info=========================================
 echo "SCREEN-RESOLUTION: $(xrandr |awk '$0 ~ "*" {print $1}')"
 echo "##########################################################################" 
 echo "Information generated on $(date)"
-) >> a.out
+) >> /root/output/$var1-$(dmidecode -s system-manufacturer).out
 git clone https://github.com/anandpavithran/audit -q
 git clone https://github.com/gls-audit/gls-audit-output -q
 git config --global user.email "audit.gmail.com"
 git config --global user.name "Audit"
-cp -rf /root/a.out /root/gls-audit-output/
+cp -rf /root/output/$var1-$(dmidecode -s system-manufacturer).out /root/gls-audit-output/
 cd /root/gls-audit-output;git add /root/gls-audit-output
 cd /root/gls-audit-output;git commit  -m "$(date)" -q
 cd /root/gls-audit-output;git push https://gls-audit:$var2@github.com/gls-audit/gls-audit-output  
