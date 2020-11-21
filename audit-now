@@ -48,7 +48,7 @@ echo "=====================Monitor Info=========================================
 echo "SCREEN-RESOLUTION: $(xrandr |awk '$0 ~ "*" {print $1}')"
 echo "##########################################################################" 
 echo "Information generated on $(date)"
-) >> /root/output/$var3-$(dmidecode -s system-manufacturer).out
+) > /root/output/$var3-$(dmidecode -s system-manufacturer).out
 git clone https://github.com/gls-audit/gls-audit-output -q
 git config --global user.email "audit.gmail.com"
 git config --global user.name "Audit"
@@ -61,8 +61,7 @@ zenity --info --title="Fetching completed" --text="Thanks for your patience.Shut
 rm -rf /root/gls-audit-output	
 else
 rm -rf /root/gls-audit-output	
-rm -rf /root/output	
-zenity --error --title="Fetching Failed" --text="May be Internet connectivity or Password issue.Retry......OR Copy file from "/root/output" and mail it." --no-wrap
+zenity --error --title="Fetching Failed" --text="May be Internet connectivity or Password issue.Retry..... Or Copy file from "/root/output" and mail it." --no-wrap
 fi
 #echo -e "\x1B[31m Information generated on $(date) \x1B[0m"
 #echo -e "\x1B[31m Thanks for your patience.You can poweroff and go to next machine \x1B[0m"
