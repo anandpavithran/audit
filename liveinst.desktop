@@ -1,0 +1,15 @@
+[Desktop Entry]
+Name[en_GB]=GLSAudit
+Name=GLSAudit
+GenericName[af]=GLSAudit
+GenericName=GLSAudit
+Comment[en_GB]=To do Audit
+Comment=To Audit
+Categories=System;Utility;X-Red-Hat-Base;X-Fedora;GNOME;GTK;
+Exec=/usr/sbin/audit-now
+Terminal=false
+Type=Application
+Icon=org.fedoraproject.AnacondaInstaller
+StartupNotify=true
+NoDisplay=false
+X-Desktop-File-Install-Version=0.24
