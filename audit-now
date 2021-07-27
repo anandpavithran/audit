@@ -55,7 +55,7 @@ git config --global user.name "Audit"
 cp -rf /root/output/$var4-$var3-$(dmidecode -s system-manufacturer |awk '{print $1}').out /root/gls-audit-output/
 cd /root/gls-audit-output;git add /root/gls-audit-output
 cd /root/gls-audit-output;git commit  -m "$(date)" -q
-cd /root/gls-audit-output;git push https://gls-audit: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@github.com/gls-audit/gls-audit-output  
+cd /root/gls-audit-output;git push https://gls-audit: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@github.com/gls-audit/gls-audit-output  
 if [ $? -eq 0 ]; then
 zenity --info --title="Fetching completed" --text="Thanks for your patience.Shutdown and move to next." --no-wrap
 rm -rf /root/gls-audit-output	
