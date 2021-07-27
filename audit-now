@@ -3,7 +3,6 @@ var1=$(zenity --forms --title="Welcome to GLS Audit" --text="Enter details" \
    --add-entry="Organization Name" \
    --add-entry="Lab Name/Number. If any" \
    --add-entry="System Number like 1,2,3.." \
-   --add-password="Password" \
    --add-calendar="Select Date")
 var2=$(echo $var1|cut -d'|' -f4)
 var3=$(echo $var1|cut -d'|' -f3)
@@ -56,7 +55,7 @@ git config --global user.name "Audit"
 cp -rf /root/output/$var4-$var3-$(dmidecode -s system-manufacturer |awk '{print $1}').out /root/gls-audit-output/
 cd /root/gls-audit-output;git add /root/gls-audit-output
 cd /root/gls-audit-output;git commit  -m "$(date)" -q
-cd /root/gls-audit-output;git push https://gls-audit:$var2@github.com/gls-audit/gls-audit-output  
+cd /root/gls-audit-output;git push https://gls-audit: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@github.com/gls-audit/gls-audit-output  
 if [ $? -eq 0 ]; then
 zenity --info --title="Fetching completed" --text="Thanks for your patience.Shutdown and move to next." --no-wrap
 rm -rf /root/gls-audit-output	
