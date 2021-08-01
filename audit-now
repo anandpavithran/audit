@@ -50,18 +50,18 @@ echo "SCREEN-RESOLUTION: $(xrandr |awk '$0 ~ "*" {print $1}')"
 echo "##########################################################################" 
 echo "Information generated on $(date)"
 ) > /root/output/$var4-$var3-$(dmidecode -s system-manufacturer |awk '{print $1}').out
-git clone https://github.com/gls-audit/gls-audit-output -q
-git config --global user.email "audit.gmail.com"
-git config --global user.name "Audit"
-cp -rf /root/output/$var4-$var3-$(dmidecode -s system-manufacturer |awk '{print $1}').out /root/gls-audit-output/
-cd /root/gls-audit-output;git add /root/gls-audit-output
-cd /root/gls-audit-output;git commit  -m "$(date)" -q
-cd /root/gls-audit-output;git push https://gls-audit:$var2@github.com/gls-audit/gls-audit-output  
+git clone https://github.com/gls-audit/gls-audit-output -q 2>/dev/null
+git config --global user.email "audit.gmail.com" 2>/dev/null
+git config --global user.name "Audit" 2>/dev/null
+cp -rf /root/output/$var4-$var3-$(dmidecode -s system-manufacturer |awk '{print $1}').out /root/gls-audit-output/ 2>/dev/null
+cd /root/gls-audit-output 2> /dev/null ;git add /root/gls-audit-output 2>/dev/null
+cd /root/gls-audit-output 2>/dev/null;git commit  -m "$(date)" -q
+cd /root/gls-audit-output 2>/dev/null ;git push https://gls-audit:$var2@github.com/gls-audit/gls-audit-output 2> /dev/null  
 if [ $? -eq 0 ]; then
 zenity --info --title="Fetching completed" --text="Thanks for your patience.Shutdown and move to next." --no-wrap
-rm -rf /root/gls-audit-output	
+rm -rf /root/gls-audit-output	2>/dev/null
 else
-rm -rf /root/gls-audit-output	
+rm -rf /root/gls-audit-output	2>/dev/null
 zenity --error --title="Fetching Failed" --text="May be Internet connectivity or Password issue.Retry..... Or Copy file from "/root/output" and mail it." --no-wrap
 fi
 #echo -e "\x1B[31m Information generated on $(date) \x1B[0m"
