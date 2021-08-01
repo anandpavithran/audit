@@ -25,18 +25,14 @@ shutdown
 %include fedora-repo.ks
 
 %packages
-#@base-x
+@base-x
 #@guest-desktop-agents
 #@standard
 @core
 #@fonts
-#@input-methods
-#@dial-up
+@input-methods
+@dial-up
 #@multimedia
--openssh-server*
-openssh-clients
--selinux*
--setro*
 -asunder
 -catfish
 -claws-mail
@@ -90,7 +86,7 @@ anaconda-live
 @anaconda-tools
 
 # Need aajohan-comfortaa-fonts for the SVG rnotes images
-#aajohan-comfortaa-fonts
+aajohan-comfortaa-fonts
 
 # Without this, initramfs generation during live image creation fails: #1242586
 dracut-live

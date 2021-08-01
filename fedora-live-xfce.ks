@@ -78,7 +78,9 @@ sed -i 's/^#user-session=.*/user-session=xfce/' /etc/lightdm/lightdm.conf
 # Show harddisk install on the desktop
 #sed -i -e 's/NoDisplay=true/NoDisplay=false/' /usr/share/applications/liveinst.desktop
 mkdir /root/Desktop
+mkdir -p /root/Desktop/.local/share/applications
 cp /etc/sysconfig/audit.desktop /root/Desktop/
+cp /etc/sysconfig/audit.desktop /root/Desktop/.local/share/applications/
 #cp /usr/share/applications/liveinst.desktop /root/Desktop
 rm -f /usr/share/applications/liveinst.desktop
 
