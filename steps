@@ -1,0 +1,2 @@
+clone audit folder
+[anandpavithran@fedora audit]$ sudo livecd-creator --verbose --config=fedora-live-xfce.ks --fslabel=Audit-LiveCD-v-1.4 --cache=/var/cache/live
