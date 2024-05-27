@@ -15,8 +15,8 @@
 
 # create /etc/sysconfig/desktop (needed for installation)
 #Create a local webserver and tary to fetch the file
-wget http://192.168.122.1/test/audit-now -O /usr/sbin/audit-now
-wget http://192.168.122.1/test/speedtest -O /usr/sbin/speedtest
+wget http://localhost/audit-now -O /usr/sbin/audit-now
+wget http://localhost/speedtest -O /usr/sbin/speedtest
 chmod +x /usr/sbin/audit-now
 chmod +x /usr/sbin/speedtest
 
