@@ -1,2 +1,8 @@
-clone audit folder
-[anandpavithran@fedora audit]$ sudo livecd-creator --verbose --config=fedora-live-xfce.ks --fslabel=Audit-LiveCD-v-1.4 --cache=/var/cache/live
+LOgin as ROOT user
+yum install livecd-tools spin-kickstarts
+yum install l10n-kickstarts
+yum install fedora-kickstarts
+mkdir /root/livecd
+cd /root/livecd
+Take required files from [clone audit folder]
+[root@fedora audit]$ sudo livecd-creator --verbose --config=fedora-live-xfce.ks --fslabel=Audit-LiveCD-v-1.4 --cache=/var/cache/live
