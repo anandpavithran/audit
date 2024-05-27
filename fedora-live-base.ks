@@ -10,7 +10,7 @@
 lang en_US.UTF-8
 keyboard us
 timezone US/Eastern
-auth --useshadow --passalgo=sha512
+#auth --useshadow --passalgo=sha512
 selinux --disabled
 firewall --enabled --service=mdns
 xconfig --startxonboot
